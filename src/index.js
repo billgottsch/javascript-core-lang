@@ -37,7 +37,30 @@ console.assert(y >= -25 && y <= 30)
 
 // ------------LETTERCOUNT FUNCTION ANSWER ---------------
 //
+function letterCount(str) {
+  if (typeof str === 'undefined') {
+    return {};
+  } else {
+    var counts = {};
+    for (var i = 0; i < str.length; i++) {
+        var currentLetter = str[i];
+        if (counts [currentLetter]) { //if seen before
+            counts [currentLetter] = counts [currentLetter] + 1;
+        } else { //seen for first time
+            counts [currentLetter] = 1;
+        }
+      }
+    }
+    return counts;
+}
 
+console.log(letterCount("oiewrjkdsldd;kfdl df"));
+
+    console.assert(letterCount("abcabcabcdefab c a oo ija ;a ;skmdals kn").b === 4)
+    console.assert(letterCount().z === undefined)
+
+// console.assert(letterCount("abcabcabcdefab c a oo ija ;a ;skmdals kn").b === 4)
+// console.assert(letterCount().z === undefined)
 //
 //
 //
