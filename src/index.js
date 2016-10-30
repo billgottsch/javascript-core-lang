@@ -24,7 +24,7 @@ console.assert(y >= -25 && y <= 30)
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 
-// --------- letterCount FUNCTION QUESTION ---------
+// --------- letterCount FUNCTION QUESTION ---------DONE
 
 // Write a function letterCount() that takes a
 // string and returns an object with the count
@@ -35,35 +35,34 @@ console.assert(y >= -25 && y <= 30)
 // case when counting them.
 
 
-// ------------LETTERCOUNT FUNCTION ANSWER ---------------
-//
-function letterCount(str) {
-  if (typeof str === 'undefined') {
-    return {};
-  } else {
-    var counts = {};
-    for (var i = 0; i < str.length; i++) {
-        var currentLetter = str[i];
-        if (counts [currentLetter]) { //if seen before
-            counts [currentLetter] = counts [currentLetter] + 1;
-        } else { //seen for first time
-            counts [currentLetter] = 1;
-        }
-      }
-    }
-    return counts;
+// ------------LETTERCOUNT FUNCTION ANSWER ---------------DONE
+
+
+function letterCount(stringOne){
+   if(typeof stringOne === "undefined" ){
+     return {}
+   }
+   var stringTwo = stringOne.toLowerCase()
+   var counts = {};
+   for (i = 0; i <= stringTwo.length; i++) {
+     var letter = stringTwo.charAt(i)
+     if(counts[letter]) {
+       counts[letter] = 1 + counts[letter]
+     } else {
+       counts[letter] = 1
+     }
+
+   }
+ return counts
 }
 
-console.log(letterCount("oiewrjkdsldd;kfdl df"));
+// tests
+console.assert(letterCount("abcabcabcdefab c a oo ija ;a ;skmdals kn").b === 4)
+console.assert(letterCount().z === undefined)
 
-    console.assert(letterCount("abcabcabcdefab c a oo ija ;a ;skmdals kn").b === 4)
-    console.assert(letterCount().z === undefined)
 
-// console.assert(letterCount("abcabcabcdefab c a oo ija ;a ;skmdals kn").b === 4)
-// console.assert(letterCount().z === undefined)
-//
-//
-//
+
+
 // --what it should have--
 // // string
 // // string []
@@ -71,11 +70,7 @@ console.log(letterCount("oiewrjkdsldd;kfdl df"));
 // //if/else
 // //object to hold couts
 // //typeof str ==='undefined'
-//
-//
-// // ----tests ----
-// console.assert(letterCount("abcabcabcdefab c a oo ija ;a ;skmdals kn").b === 4)
-// console.assert(letterCount().z === undefined)
+
 
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
@@ -89,12 +84,11 @@ console.log(letterCount("oiewrjkdsldd;kfdl df"));
 // -------------- REVERSE FUNCTION ANSWER --------------DONE
 
 function reverse(s) {
-  var o = [];
+  var thing = [];
   for (var i = s.length - 1, j = 0; i >= 0; i--, j++)
-    o[j] = s[i];
-  return o.join('');
+    thing[j] = s[i];
+  return thing.join('');
 }
-
 
  console.assert(reverse('hello') === 'olleh')
  console.assert(reverse('hello, world') === 'dlrow ,olleh')
@@ -102,7 +96,7 @@ function reverse(s) {
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 
- // ---------------QUESTION STRING, ARRAY, OBJECT --------------
+ // ---------------QUESTION STRING, ARRAY, OBJECT -------------- Sort of Done
  // write a method names()
 // which takes a string of
 // comma-separated names
@@ -112,9 +106,9 @@ function reverse(s) {
 // lastname is a value
 
 
-// -------------------ANSWER STRING, ARRAY, OBJECT-------------------
+// -------------------ANSWER STRING, ARRAY, OBJECT-------------------Sort of Done
 
-
+//It's only doing one name and I can't figure out what to do next...
 
 function names(str){
   var newnames ={};
